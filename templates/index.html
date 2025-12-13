@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot@RYMEC</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-box">
+    <div class="loader-title">Chatbot@RYMEC</div>
+    <div class="spinner"></div>
+    <div class="loader-text">Loading...</div>
+  </div>
+</div>
+
+<!-- Chatbot -->
+<div class="chatbox" id="chatbox" style="display:none;">
+  <div class="header">Chatbot@RYMEC</div>
+
+  <div id="messages"></div>
+
+  <div class="input-area">
+    <input id="input" placeholder="Type here..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="/static/js/chat.js"></script>
+</body>
+</html>
