@@ -3,7 +3,8 @@ body {
   background: #f0f2f5;
 }
 
-#loading {
+/* LOADING SCREEN */
+#loading-screen {
   position: fixed;
   inset: 0;
   background: #1f3c88;
@@ -12,9 +13,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
+/* SPINNER */
 .spinner {
   width: 40px;
   height: 40px;
@@ -22,12 +24,14 @@ body {
   border-top: 4px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  margin: 15px 0;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
+/* CHATBOX (HIDDEN INITIALLY) */
 .chatbox {
   display: none;
   width: 400px;
