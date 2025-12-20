@@ -34,13 +34,13 @@ def index():
 
 @app.route("/chat", methods=["POST"])
 def chat():
-    message = request.json.get("message", "")
+    msg = request.json.get("message", "")
     year = request.json.get("year")
     branch = request.json.get("branch")
 
-    y = detect_year(message)
-    b = detect_branch(message)
-    n = detect_need(message)
+    y = detect_year(msg)
+    b = detect_branch(msg)
+    n = detect_need(msg)
 
     if y:
         year = y
@@ -48,40 +48,24 @@ def chat():
         branch = b
 
     if not year:
-        return jsonify({
-            "reply": "Which year you are in? (1 or 2)",
-            "year": None,
-            "branch": branch
-        })
+        return jsonify(reply="Which year you are in? (1 or 2)", year=None, branch=branch)
 
     if not branch:
-        return jsonify({
-            "reply": "Which branch you are in? (CSE, CIVIL, ECE, EEE, ME)",
-            "year": year,
-            "branch": None
-        })
+        return jsonify(reply="Which branch you are in? (CSE, CIVIL, ECE, EEE, ME)", year=year, branch=None)
 
     if not n:
-        return jsonify({
-            "reply": "What do you need? (Syllabus / Faculty)",
-            "year": year,
-            "branch": branch
-        })
+        return jsonify(reply="What do you need? (Syllabus / Faculty)", year=year, branch=branch)
 
     link = DATA.get(year, {}).get(branch, {}).get(n)
 
     if link:
-        return jsonify({
-            "reply": f"Here is the {n.capitalize()} PDF for {branch}, {year} year:\n{link}",
-            "year": year,
-            "branch": branch
-        })
+        return jsonify(
+            reply=f"Here is the {n.capitalize()} PDF for {branch}, {year} year:\n{link}",
+            year=year,
+            branch=branch
+        )
 
-    return jsonify({
-        "reply": "Sorry, this document is not available.",
-        "year": year,
-        "branch": branch
-    })
+    return jsonify(reply="Sorry, this document is not available.", year=year, branch=branch)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
