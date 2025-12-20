@@ -29,7 +29,15 @@ function add(text, cls) {
 
   const div = document.createElement("div");
   div.className = cls;
-  div.innerText = text;
+
+  // Convert URLs into clickable links
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const html = text.replace(
+    urlRegex,
+    url => `<a href="${url}" target="_blank" style="color:#1f3c88; font-weight:bold;">Open PDF</a>`
+  );
+
+  div.innerHTML = html.replace(/\n/g, "<br>");
   messages.appendChild(div);
   messages.scrollTop = messages.scrollHeight;
 }
@@ -58,3 +66,4 @@ function sendMessage() {
 document.addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
 });
+
