@@ -1,22 +1,46 @@
 {
   "1": {
-    "syllabus": "https://drive.google.com/XXXX1",
-    "curriculum": "https://drive.google.com/XXXX2",
-    "faculty": "https://drive.google.com/XXXX3"
+    "CSE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "CIVIL": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "ECE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "EEE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "ME": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    }
   },
   "2": {
-    "syllabus": "https://drive.google.com/YYYY1",
-    "curriculum": "https://drive.google.com/YYYY2",
-    "faculty": "https://drive.google.com/YYYY3"
-  },
-  "3": {
-    "syllabus": "https://drive.google.com/ZZZZ1",
-    "curriculum": "https://drive.google.com/ZZZZ2",
-    "faculty": "https://drive.google.com/ZZZZ3"
-  },
-  "4": {
-    "syllabus": "https://drive.google.com/AAAA1",
-    "curriculum": "https://drive.google.com/AAAA2",
-    "faculty": "https://drive.google.com/AAAA3"
+    "CSE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "CIVIL": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "ECE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "EEE": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    },
+    "ME": {
+      "syllabus": "PASTE_LINK_HERE",
+      "faculty": "PASTE_LINK_HERE"
+    }
   }
 }
