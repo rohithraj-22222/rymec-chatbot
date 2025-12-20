@@ -1,113 +1,18 @@
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #eef2f7, #dbe4f0);
-  margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
 }
 
-/* Chat container */
-.chatbox {
-  width: 380px;
-  max-width: 92%;
-  margin: 50px auto;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/* Header */
-.header {
-  background: #1f3c88;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* Messages */
-#messages {
-  flex: 1;
-  padding: 12px;
-  overflow-y: auto;
-  background: #f8f9fb;
-}
-
-/* Bot bubble */
-.bot {
-  background: #eef1f6;
-  color: #222;
-  padding: 10px 14px;
-  border-radius: 14px;
-  margin: 8px 0;
-  max-width: 80%;
-}
-
-/* User bubble */
-.user {
-  background: #1f3c88;
-  color: #ffffff;
-  padding: 10px 14px;
-  border-radius: 14px;
-  margin: 8px 0;
-  max-width: 80%;
-  margin-left: auto;
-}
-
-/* Input */
-.input-area {
-  display: flex;
-  border-top: 1px solid #ddd;
-}
-
-input {
-  flex: 1;
-  border: none;
-  padding: 12px;
-  font-size: 14px;
-  outline: none;
-}
-
-button {
-  background: #1f3c88;
-  color: white;
-  border: none;
-  padding: 0 18px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #162e66;
-}
-
-/* Loading Screen */
-#loading-screen {
+#loading {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #1f3c88, #162e66);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.loader-box {
-  text-align: center;
+  background: #1f3c88;
   color: white;
-}
-
-.loader-title {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.loader-text {
-  margin-top: 10px;
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .spinner {
@@ -117,9 +22,63 @@ button:hover {
   border-top: 4px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin: auto;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.chatbox {
+  display: none;
+  width: 400px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-direction: column;
+}
+
+.header {
+  background: #1f3c88;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#messages {
+  padding: 10px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.bot {
+  background: #e8ebf0;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.user {
+  background: #1f3c88;
+  color: white;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
 }
