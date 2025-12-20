@@ -1,29 +1,38 @@
 let year = null;
 let branch = null;
+let messages = null;
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Force loading screen to stay for 2 seconds
+  // Show loading for 2 seconds
   setTimeout(() => {
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("chatbox").style.display = "flex";
   }, 2000);
+
+  // Now messages div exists
+  messages = document.getElementById("messages");
+
+  // Welcome message
+  add(
+    "Hi, I’m Chatbot@RYMEC.\n" +
+    "Which year you are in?\n" +
+    "Which branch you are in?\n" +
+    "What do you need? (Syllabus / Faculty)\n\n" +
+    "[EX: 1 ME Faculty]\n\n" +
+    "Branches:\nCSE, CIVIL, ECE, EEE, ME",
+    "bot"
+  );
 });
 
-const messages = document.getElementById("messages");
-
 function add(text, cls) {
+  if (!messages) return;
+
   const div = document.createElement("div");
   div.className = cls;
   div.innerText = text;
   messages.appendChild(div);
   messages.scrollTop = messages.scrollHeight;
 }
-
-// Welcome message
-add(
-  "Hi, I’m Chatbot@RYMEC.\nWhich year you are in?\nWhich branch you are in?\nWhat do you need? (Syllabus / Faculty)\n\n[EX: 1 ME Faculty]\n\nBranches:\nCSE, CIVIL, ECE, EEE, ME",
-  "bot"
-);
 
 function sendMessage() {
   const input = document.getElementById("input");
@@ -38,14 +47,14 @@ function sendMessage() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: text, year, branch })
   })
-  .then(res => res.json())
-  .then(data => {
-    if (data.year) year = data.year;
-    if (data.branch) branch = data.branch;
-    add(data.reply, "bot");
-  });
+    .then(res => res.json())
+    .then(data => {
+      if (data.year) year = data.year;
+      if (data.branch) branch = data.branch;
+      add(data.reply, "bot");
+    });
 }
 
-document.getElementById("input").addEventListener("keydown", e => {
+document.addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
 });
