@@ -1,6 +1,13 @@
 let year = null;
 let branch = null;
 
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("chatbox").style.display = "flex";
+  }, 2000);
+};
+
 const messages = document.getElementById("messages");
 
 function add(text, cls) {
@@ -12,7 +19,7 @@ function add(text, cls) {
 }
 
 add(
-  "Hi, I’m Chatbot@RYMEC.\nWhich year you are in?\nWhich branch you are in?\nWhat do you need? (Syllabus / Faculty)\n\n[EX: 1 ME Faculty]\n\nHere is the list of branch:\nCSE, CIVIL, ECE, EEE, ME",
+  "Hi, I’m Chatbot@RYMEC.\nWhich year you are in?\nWhich branch you are in?\nWhat do you need? (Syllabus / Faculty)\n\n[EX: 1 ME Faculty]\n\nBranches:\nCSE, CIVIL, ECE, EEE, ME",
   "bot"
 );
 
@@ -27,11 +34,7 @@ function sendMessage() {
   fetch("/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message: text,
-      year: year,
-      branch: branch
-    })
+    body: JSON.stringify({ message: text, year, branch })
   })
   .then(res => res.json())
   .then(data => {
@@ -44,5 +47,6 @@ function sendMessage() {
 document.getElementById("input").addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
 });
+
 
 
