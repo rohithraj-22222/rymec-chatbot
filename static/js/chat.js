@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "What do you need? (Syllabus / Faculty)\n\n" +
     "[EX: 1 ME Faculty]\n\n" +
     "Branches:\nCSE, CIVIL, ECE, EEE, ME, AIML" +
-    "1's year cycle : chem , phy",
+    "1's year cycle :\nchem , phy", +
+    "2025 scheme for further sem/year:\n2025S  "
     "bot"
   );
 });
@@ -67,6 +68,7 @@ function sendMessage() {
 document.addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
 });
+
 
 
 
