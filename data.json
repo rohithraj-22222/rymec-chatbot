@@ -1,12 +1,14 @@
 {
   "1": {
-    "CSE": { "syllabus": "PASTE_LINK", "faculty": "https://drive.google.com/file/d/1vvZ9lnxgxdL4a4qksnAT6tmbdN1I13P4/view" },
+    "AIML": { "syllabus": "PASTE_LINK", "faculty": "https://drive.google.com/file/d/1vvZ9lnxgxdL4a4qksnAT6tmbdN1I13P4/view" },
+    "CSE":{ "syllabus": "PAST_LINK", "faculty": "PASTE_LINK" },
     "CIVIL": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
     "ECE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
     "EEE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
     "ME": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" }
   },
   "2": {
+    "AIML":{ "syllabus": "PAST_LINK", "faculty": "PASTE_LINK" },
     "CSE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
     "CIVIL": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
     "ECE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
