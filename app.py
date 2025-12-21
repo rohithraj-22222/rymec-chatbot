@@ -15,7 +15,7 @@ def detect_year(text):
 
 def detect_branch(text):
     text = text.upper()
-    for branch in ["CSE", "CIVIL", "ECE", "EEE", "ME"]:
+    for branch in ["CSE", "CIVIL", "ECE", "EEE", "ME", "AIML"]:
         if branch in text:
             return branch
     return None
