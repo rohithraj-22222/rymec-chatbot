@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "[EX: 1 ME Faculty]\n\n" +
     "Branches:\nCSE, CIVIL, ECE, EEE, ME, AIML" +
     "1's year cycle :\nchem , phy", +
-    "2025 scheme for further sem/year:\n2025S  "
+    "2025 scheme for further sem/year:\n2025S",
     "bot"
   );
 });
