@@ -8,12 +8,12 @@
     "CSE":{ "syllabus": "https://drive.google.com/drive/folders/124-EF5dfCW31RETE7Iz520bY5BK67WfU?usp=drive_linkK", "faculty": "PASTE_LINK" }
   },
   "2": {
-    "AIML":{ "syllabus": "PAST_LINK", "faculty": "PASTE_LINK" },
-    "CIVIL": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
-    "ECE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
-    "EEE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
-    "ME": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" },
-    "CSE": { "syllabus": "PASTE_LINK", "faculty": "PASTE_LINK" }
+    "AIML":{ "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "PASTE_LINK" },
+    "CIVIL": { "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "https://drive.google.com/file/d/14K5-_wQPY2KDwkdfoKFYoeM1CapN0AWK/view" },
+    "ECE": { "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "https://drive.google.com/file/d/1Ekyup-4tW83U9GI0JPiSQedaL2xasQ59/view" },
+    "EEE": { "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "https://drive.google.com/file/d/1RuHiK5X-BT33edpPtf2olg-00z35-YqC/view" },
+    "ME": { "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "https://drive.google.com/file/d/1F5gEMgjWrHIgOn2vTkYwzFdMrRrioURX/view" },
+    "CSE": { "syllabus": "https://vtu.ac.in/b-e-scheme-syllabus/", "faculty": "PASTE_LINK" }
   }
 }
 
