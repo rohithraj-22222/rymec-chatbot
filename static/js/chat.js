@@ -34,7 +34,7 @@ function add(text, cls) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   const html = text.replace(
     urlRegex,
-    url => `<a href="${url}" target="_blank" style="color:#1f3c88; font-weight:bold;">Open PDF</a>`
+    url => `<a href="${url}" target="_blank" style="color:#1f3c88; font-weight:bold;"> LINK </a>`
   );
 
   div.innerHTML = html.replace(/\n/g, "<br>");
@@ -66,6 +66,7 @@ function sendMessage() {
 document.addEventListener("keydown", e => {
   if (e.key === "Enter") sendMessage();
 });
+
 
 
 
